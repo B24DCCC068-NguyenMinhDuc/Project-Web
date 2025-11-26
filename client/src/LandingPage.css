@@ -1,0 +1,147 @@
+/* LandingPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #00b4d8; /* Xanh ngọc sáng */
+  --secondary-color: #0077b6; /* Xanh biển đậm */
+  --accent-color: #caf0f8; /* Xanh nhạt nền */
+  --text-dark: #333;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Font chữ hiện đại */
+}
+
+/* --- HEADER --- */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.btn-login-nav {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px; /* Nút bo tròn */
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 182, 0.4);
+}
+
+/* --- HERO SECTION (Banner chính) --- */
+.hero-section {
+  height: 90vh; /* Chiếm 90% chiều cao màn hình */
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), 
+              url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  letter-spacing: 1px; /* Hiệu ứng giãn chữ khi hover */
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
