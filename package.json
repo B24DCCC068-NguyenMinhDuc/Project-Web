@@ -1,0 +1,13 @@
+{
+    "name": "white-admin",
+    "version": "1.0.0",
+    "scripts": {
+        "frontend": "npm start --prefix \"Project-Web-admin-frontend\"",
+        "backend": "npm run dev --prefix \"Project-Web-backend\"",
+        "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "nodemon": "^3.1.11"
+    }
+}
