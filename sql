@@ -65,5 +65,5 @@ INSERT INTO doctors (user_id, specialty) VALUES (LAST_INSERT_ID(), 'Thần kinh'
 
 INSERT INTO users (username, password, role, full_name) VALUES ('bs_Bách', '123', 'doctor', 'Dr. Lê Xuân Bách');
 INSERT INTO doctors (user_id, specialty) VALUES (LAST_INSERT_ID(), 'Da liễu');
-
+ALTER TABLE schedules ADD COLUMN time VARCHAR(20);
 
