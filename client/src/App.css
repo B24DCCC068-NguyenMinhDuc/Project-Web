@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.sidebar a {
+    text-decoration: none;
+    width: 100%;       
+    display: block;    
+    margin-bottom: 12px; 
+}
+
+
+.sidebar button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sidebar button, 
+.user-info-box {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    border: none;
+    padding: 15px 20px; 
+    border-radius: 12px; 
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;      
+    align-items: center;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+}
+
+.user-info-box {
+    margin-bottom: 25px; 
+    justify-content: center; 
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.25); 
+    border-left: none; 
+}
+
+.sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.35); 
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.sidebar button.active {
+    background-color: #1abc9c; 
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    border-left: none; 
+    padding-left: 20px; 
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f0f2f5;
+}
+
+
+/* CSS cho form và bảng */
+.component-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #667eea;
+}
+
+.component-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.form-section {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-section div {
+  margin-bottom: 15px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+tbody tr {
+  transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f0f2f5;
+  box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.form-section button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.form-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.form-section button:active {
+  transform: translateY(0);
+}
+
+table .Edit {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+table .Edit:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+table .Delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+table .Delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* --- Home.jsx Styles --- */
+
+/* Màu sắc cơ bản cho các icon */
+:root {
+    --color-green: #2ecc71;
+    --color-blue: #3498db;
+    --color-yellow: #f1c40f;
+    --color-red: #e74c3c;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-card {
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+    transition: all 0.3s ease;
+    border-top: 4px solid #667eea;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.8rem;
+}
+
+.card-content {
+    text-align: left;
+}
+
+.card-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.card-title {
+    font-size: 0.95rem;
+    color: #888;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* User info box */
+.user-info-box {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 3px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-logout {
+    margin-top: auto;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3) !important;
+}
+
+.btn-logout:hover {
+    background-color: #e74c3c !important;
+}
+
+/* Sidebar button active */
+.sidebar button.active {
+    background-color: #1abc9c;
+    border-left: 4px solid #fff;
+    font-weight: bold;
+}
+
+/* Link mặc định của React Router hay có gạch chân, bỏ đi */
+.sidebar a {
+    text-decoration: none;
+    width: 100%;
+}
